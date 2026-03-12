@@ -1,5 +1,5 @@
 // 2. Find the big number in given three numbers
-    let num3=30;
+    let num1=20,num2=10,num3=30;
     if(num1>num2){
         if(num1>num3){
             bigNum=num1;
@@ -14,3 +14,4 @@
         }
     }
     console.log(`The greatest number amongst ${num1},${num3},${num3} is ${bigNum}`);
+
