@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.part1 {
+    background-color: rgb(233, 236, 239); 
+    padding: 60px 50px;  
+    margin-bottom: 30px;
+}
+
+.part1 h1 {
+    font-size: 4rem;
+    margin-top: 0;
+}
+
+.part1 button {
+    background-color: #007bff; 
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+
+}
+
+.part2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    gap: 30px;
+}
+
+.child {
+    flex: 1; 
+}
+
+.child button {
+    background-color: #6c757d; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+
+}
+
+footer {
+    margin-top: 40px;
+    padding: 0 50px 20px 50px;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #dee2e6;
+    margin-bottom: 20px;
+}
