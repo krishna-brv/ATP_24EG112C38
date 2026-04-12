@@ -15,11 +15,10 @@ const app = exp()
 app.use(cors({
   origin: ["https://atp-24-eg-112-c38-ga42.vercel.app"],
   credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  //methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  //allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-app.options("*", cors());
 
 // assign port
 
