@@ -35,7 +35,7 @@ function WriteArticles() {
 
     try {
       let res = await axios.post(
-        "http://localhost:5000/author-api/article",
+        "https://atp-24eg112c38-2.onrender.com/author-api/article",
         articleObj,
         { withCredentials: true }
       );
