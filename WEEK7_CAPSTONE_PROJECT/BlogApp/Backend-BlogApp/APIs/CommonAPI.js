@@ -77,7 +77,7 @@ commonApp.post('/login',async(req,res)=>{
     // set token to the cookie header 
     res.cookie("token",signedToken,{
         httpOnly:true,
-        sameSite:"lax",
+        sameSite:"none",
         secure:true
     })
     // remove the password field from the user obj
