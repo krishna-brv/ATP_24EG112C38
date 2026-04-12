@@ -12,6 +12,7 @@ import {uploadToCloudinary} from '../config/cloudinaryUpload.js'
 import cloudinary from '../config/cloudinary.js'
 
 const {sign}=jwt
+
 // Route to register
 commonApp.post('/users',upload.single("profileImageUrl"),async (req,res)=>{
     try{
@@ -67,7 +68,7 @@ commonApp.post('/login',async(req,res)=>{
     // compare the password with og password
     let isMatched = await compare(password,user.password)
     if(!isMatched){
-        return res.json({message:"Incorrect password"});
+        return res.status(400).json({message:"Incorrect password"});
     }
 
 
@@ -80,6 +81,7 @@ commonApp.post('/login',async(req,res)=>{
         sameSite:"none",
         secure:true
     })
+
     // remove the password field from the user obj
     const userObj = user.toObject();
     delete userObj.password;
@@ -93,7 +95,7 @@ commonApp.get('/logout',(req,res)=>{
     res.clearCookie("token",{
         httpOnly:true,
         sameSite:"none",
-        secure:false
+        secure:true
     })
     res.status(200).json({message:"Logged out successfully"});
 })
@@ -130,5 +132,4 @@ commonApp.put('/password',verifyToken("ADMIN","AUTHOR","USER"),async (req,res)=>
     user.save();
     //send res
     res.status(200).json({message:"Password updated"})
-
 })
