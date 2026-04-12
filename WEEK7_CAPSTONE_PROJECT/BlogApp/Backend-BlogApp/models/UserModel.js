@@ -24,6 +24,7 @@ const userSchema = new Schema({
     },
     profileImageUrl:{
         type:String,
+        required:[true,"Mandatory field"]
     },
     isUserActive:{
         type:Boolean,
