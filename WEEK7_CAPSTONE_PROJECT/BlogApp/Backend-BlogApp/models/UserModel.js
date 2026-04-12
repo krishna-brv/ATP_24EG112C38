@@ -23,8 +23,7 @@ const userSchema = new Schema({
         required:[true,"Invalid role"]
     },
     profileImageUrl:{
-        type:String,
-        required:[true,"Mandatory field"]
+        type:String
     },
     isUserActive:{
         type:Boolean,
