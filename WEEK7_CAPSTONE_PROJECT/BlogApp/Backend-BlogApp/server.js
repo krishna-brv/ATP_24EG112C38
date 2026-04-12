@@ -13,7 +13,7 @@ config();
 const app = exp()
 // assign port
 
-app.use(cors({origin:"*",credentials:true}))
+app.use(cors({origin:["https://atp-24-eg-112-c38-ga42.vercel.app/"],credentials:true}))
 // connect to db
 const connectDB= async()=>{
     try{
