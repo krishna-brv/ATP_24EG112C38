@@ -13,7 +13,7 @@ config();
 const app = exp()
 
 app.use(cors({
-  origin: ["https://atp-24-eg-112-c38-ga42.vercel.app"],
+  origin: ["https://atp-24-eg-112-c38-ga42.vercel.app","https://blogapp-atp-capstone-24eg112c38.vercel.app"],
   credentials: true,
   //methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   //allowedHeaders: ["Content-Type", "Authorization"]
