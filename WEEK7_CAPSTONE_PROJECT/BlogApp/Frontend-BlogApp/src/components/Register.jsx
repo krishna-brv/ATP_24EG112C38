@@ -29,7 +29,7 @@ const navigate = useNavigate();
 
   //When user registration submitted
   const onUserRegister = async (userObj) => {
-    console.log(userObj);
+    //console.log(userObj);
     let {profileImageUrl}=userObj;
     // file+ userObj -->FormData
 
