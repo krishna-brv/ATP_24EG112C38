@@ -1,7 +1,7 @@
 // Create express application
 import exp from 'express'
-import {connect} from 'mongoose'
-import {config} from 'dotenv'
+import { connect } from 'mongoose'
+import { config } from 'dotenv'
 import { userApp } from './APIs/UserAPI.js';
 import { authorApp } from './APIs/AuthorAPI.js';
 import { adminApp } from './APIs/AdminAPI.js';
@@ -11,22 +11,30 @@ import cors from "cors"
 
 config();
 const app = exp()
+
+app.use(cors({
+  origin: ["https://atp-24-eg-112-c38-ga42.vercel.app"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
+app.options("*", cors());
+
 // assign port
 
-app.use(cors({origin:["https://atp-24-eg-112-c38-ga42.vercel.app"],credentials:true}))
 // connect to db
-const connectDB= async()=>{
-    try{
-        await connect(process.env.DB_URL);
-        console.log("connected to database");
-        
-        const port = process.env.PORT || 5000;
-        app.listen(port,()=>console.log(`server started on port ${port}`))
-    }
-    catch(err){
-        console.log("error in db connection");
-        
-    }
+const connectDB = async () => {
+  try {
+    await connect(process.env.DB_URL);
+    console.log("connected to database");
+
+    const port = process.env.PORT || 5000;
+    app.listen(port, () => console.log(`server started on port ${port}`))
+  }
+  catch (err) {
+    console.log("error in db connection");
+  }
 }
 
 connectDB();
@@ -36,21 +44,22 @@ connectDB();
 // body parser middleware
 app.use(exp.json());
 app.use(cookieParser())
+
 //path level middleware
-app.use('/user-api',userApp);
-app.use('/author-api',authorApp);
-app.use('/admin-api',adminApp);
-app.use('/auth',commonApp);
+app.use('/user-api', userApp);
+app.use('/author-api', authorApp);
+app.use('/admin-api', adminApp);
+app.use('/auth', commonApp);
 
 
 
 //to handle invalid path
-app.use((req,res,next)=>{
-    console.log(req.url)
-    res.status(404).json({message:`path ${req.url} is invalid`})
+app.use((req, res, next) => {
+  console.log(req.url)
+  res.status(404).json({ message: `path ${req.url} is invalid` })
 })
+
 // error handling middleware[ALWAYS KEEP AT END OF THE FILE]
-// Error handling middleware
 app.use((err, req, res, next) => {
   console.log("Error name:", err.name);
   console.log("Error code:", err.code);
