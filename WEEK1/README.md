@@ -1,5 +1,3 @@
-# WEEK1/README.md
-
 # Week 1 – JavaScript Basics
 
 ## Overview
