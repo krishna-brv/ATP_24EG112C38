@@ -1,5 +1,3 @@
-# WEEK3/README.md
-
 # Week 3 – MongoDB Basics
 
 ## Overview
