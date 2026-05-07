@@ -1,16 +1,41 @@
-# Week 3
+# WEEK3/README.md
 
-## Objective
-- To learn basic database operations using MongoDB.
+# Week 3 – MongoDB Basics
 
-## Work Description
-- Performed:
-  - Database and collection creation
-  - Document insertion
-  - Update operations
-  - Delete operations
-- Practiced basic MongoDB queries.
+## Overview
+This week focused on learning MongoDB fundamentals including databases, collections, CRUD operations, and query execution.
 
-## Outcome
-- Gained understanding of NoSQL database concepts.
-- Learned basic MongoDB operations.
+---
+
+## Folder Structure
+
+```text
+WEEK3/
+├── MongoDB practice.txt
+└── README.md
+```
+
+---
+
+## What I Have Done
+
+- Practiced MongoDB shell commands.
+- Performed CRUD operations.
+- Worked with collections and documents.
+- Learned query execution and filtering.
+
+---
+
+## File Descriptions
+
+### MongoDB practice.txt
+Contains MongoDB practice commands, queries, and database operation examples.
+
+---
+
+## Key Learnings
+
+- Understood MongoDB document structure.
+- Learned CRUD operations in MongoDB.
+- Practiced query-based data retrieval.
+- Improved database handling skills.
