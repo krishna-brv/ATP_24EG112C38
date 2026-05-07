@@ -1,5 +1,3 @@
-# WEEK2/README.md
-
 # Week 2 – Intermediate JavaScript
 
 ## Overview
