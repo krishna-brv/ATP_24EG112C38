@@ -9,16 +9,13 @@ This week focused on responsive web design, Flexbox layouts, CSS styling, and be
 
 ```text
 WEEK5/
-├── Day12/
 │   ├── Project_Flex/
 │   ├── Project_USERS/
 │   ├── Table_1/
 │   └── Table_2/
-├── Day13/
 │   ├── Project-1/
 │   ├── Project-2-responsive/
 │   └── Project-3-responsive/
-├── Day14/
 │   ├── react-app-1/
 │   └── react-app-2/
 └── README.md
